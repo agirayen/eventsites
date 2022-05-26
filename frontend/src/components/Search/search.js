@@ -1,13 +1,7 @@
-import main from "./Main";
-
 export const Search = (props) => {
   return (
-    <div className="SearchField">
-      <input id="Zipcodetext" value="zipcode" />
-      <button name="submit" value="Search" onClick={main}>
-        Search
-      </button>
-    </div>
+    //_embedded.events[0]._embedded.venues[0].postalCode
+    console.log(props, "search reached")
   );
 };
 export default Search;
