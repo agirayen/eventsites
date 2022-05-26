@@ -1,0 +1,36 @@
+.EventsTable {
+  margin-top: 2em;
+  border-radius: 1em;
+  border: groove;
+  border-color: black;
+  padding: 1em;
+  margin-right: 5%;
+  margin-left: 5%;
+  box-shadow: 1px 2px 20px 7px #888;
+  opacity: 0.85;
+}
+table {
+  font-size: 16px;
+  font-family: sans-serif;
+  border-collapse: collapse;
+  border: 1px solid rgba(15, 14, 14, 0.867);
+  width: 40%;
+  overflow-x: auto;
+}
+
+thead tr {
+  background-color: teal;
+  color: white;
+  text-align: center;
+}
+thead th {
+  padding: 12px 15px;
+}
+tr,
+td {
+  padding: 12px 15px;
+  border-bottom: 1px solid rgba(185, 179, 179, 0.867);
+}
+tbody tr:hover {
+  background-color: rgba(0, 128, 128, 0.1);
+}
