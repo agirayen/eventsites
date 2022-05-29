@@ -7,7 +7,7 @@
     "build": "npx tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ts-node server.js",
-    "dev": "concurrently -k \"npx tsc -w \" \"nodemon ./dist/server.js\""
+    "dev": "concurrently -k \"npx tsc -w \" \"nodemon ./dist/server.js\"" 
   },
   "author": "",
   "license": "ISC",

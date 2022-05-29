@@ -14,6 +14,7 @@
       "allowJs": true,
       "allowSyntheticDefaultImports": true,
       "esModuleInterop": true,
+      //this makes easy when we switch javascript to typescript
       "noImplicitAny": false,
       "strict": false,
       "noImplicitUseStrict": false,
@@ -22,9 +23,11 @@
       "noImplicitThis": false,
     },
     "display":"Recommended",
+    // should process these files: from where the processing starts
     "include": [
       "src","server.js"
       
     ],
+    //should not process files: can ignore these files
     "exclude":["node_modules"]
   }
