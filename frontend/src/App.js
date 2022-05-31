@@ -5,17 +5,14 @@ import Purchased from "./components/Purchased/purchased";
 import Home from "./components/Home/home";
 import Wishlist from "./components/Wishlist/wishlist";
 import Main from "./components/Search/search";
+import LaunchPage from "./components/LaunchPage/Launchpage";
+import { SliderData } from "./components/LaunchPage/SliderData";
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <div className="navContainer">
           <Nav className="ml-auto" style={{ backgroundColor: "black" }}>
-            <NavItem className="navs">
-              <Link className="nav-link" to="/home">
-                Home
-              </Link>
-            </NavItem>
             <NavItem className="navs">
               <Link className="nav-link" to="/search">
                 Search
@@ -31,7 +28,13 @@ function App() {
                 Purchased
               </Link>
             </NavItem>
+            <NavItem className="navs">
+              <Link className="nav-link" to="/home">
+                Logout
+              </Link>
+            </NavItem>
           </Nav>
+          <LaunchPage slides={SliderData} />
         </div>
 
         <Routes>

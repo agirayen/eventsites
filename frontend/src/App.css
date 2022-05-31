@@ -2,9 +2,7 @@
   text-align: center;
   color: white;
 }
-#root > div > div.navContainer {
-  background-color: teal;
-}
+
 .navs {
   color: white;
   text-align: center;
