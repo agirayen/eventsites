@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <div className="navContainer">
-          <Nav className="ml-auto" style={{ backgroundColor: "black" }}>
+          <Nav className="navbar">
             <NavItem className="navs">
               <Link className="nav-link" to="/search">
                 Search
