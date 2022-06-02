@@ -16,3 +16,28 @@
 .navs {
   float: left;
 }
+input {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+/* This is search field css and html should be 
+/*<input type="text" name="search" placeholder="Search.."> */
+#search {
+  background-color: white;
+  background-image: url("./components/LaunchPage/icons/searchIcon.png");
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+}
+/*intended for login and signup options.*/
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
