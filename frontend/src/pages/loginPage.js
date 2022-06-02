@@ -1,7 +1,7 @@
 import React from "react";
 import Login from "../templates/login/login";
 import { postData, getData } from "../services/httpService";
-import { baseUrl } from "../config";
+import { baseUrl } from "../config.js";
 import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
