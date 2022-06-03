@@ -1,9 +1,9 @@
-const http =require("http");
-const fs =require ("fs");
-const path = require ("path");
-const server = http.createServer((req,res)=>{
+import minimal from "./src/minimal"; 
 
-});
-server.listen(9001,()=>{
-    console.log("Server running on port 9001");
+const app = minimal();
+
+app.use("/admin", (req, res) => console.log("you went to admin page"));
+
+const server = app.listen(9001, () => {
+  console.log("Server is running");
 });
