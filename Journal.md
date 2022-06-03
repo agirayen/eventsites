@@ -24,5 +24,16 @@
 9. Create Dockerfile
 10. Add .dockerignore file 
 
+# Creating Database layer
+1. Install necessary dependencies for eg. `npm install cors`
+2. Add query service support using pg(postgres) pool
+3. Modify docker-compose.yml with the right postgres port and db
+4. Update server.js routes to invoke queryservice 
+
+# TBD
+1. Creating the tables (Need database schema and seed ???) 
+2. Update the queryservice as per requirement 
+
+
 
 
