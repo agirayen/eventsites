@@ -1,10 +1,10 @@
 version: "3"
 services:
-    doggrdb:
-        container_name: doggrdb
-        image: mongo
-        volumes:
-            - /data/doggrdb:/data/db # this is format of host_path:container_path
+    # doggrdb:
+    #     container_name: doggrdb
+    #     image: mongo
+    #     volumes:
+    #         - /data/doggrdb:/data/db # this is format of host_path:container_path
     postgres:
         container_name: postgres
         image: postgres
@@ -12,9 +12,9 @@ services:
         ports:
             - "5432:5432"
         environment:
-            - POSTGRES_DB=doggrdb
-            - POSTGRES_USER=doggr_user
-            - POSTGRES_PASSWORD=doggr_pass
+            - POSTGRES_DB=Events
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=postgrespw
     # backend:
     #     container_name: backend
     #     build: ./backend/
