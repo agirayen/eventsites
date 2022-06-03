@@ -5,11 +5,7 @@ export const postData = (url, data) => {
 };
 
 export const getData = (url, data) => {
-  let { username, password } = data;
   return axios.get(url, {
-    params: {
-      username,
-      password,
-    },
+    params: data,
   });
 };
