@@ -9,6 +9,19 @@ const LoginPage = () => {
   const handleLogin = (username, password) => {
     console.log(username, password);
 
+    if (!username || !password) {
+      alert("Enter username or password");
+      return;
+    }
+
+    if (username.length === 0 || password.length === 0) {
+      alert("Enter username or password");
+    }
+
+    if (username.length === 0 && password.length === 0) {
+      alert("Enter username and password");
+    }
+
     let data = {
       username,
       password,
@@ -16,8 +29,10 @@ const LoginPage = () => {
     getData(`${baseUrl}/getUser`, data).then((success) => {
       console.log(success);
       const { isError } = success.data.error;
+      const userId = success.data.data.userId;
       if (!isError) {
         localStorage.setItem("isAuthenticated", "true");
+        localStorage.setItem("userId", userId);
         router("/events", { replace: true });
       }
     });

@@ -1,25 +1,13 @@
+import { useState } from "react";
 import "./App.css";
-import { Nav, NavItem } from "react-bootstrap";
-import Purchased from "./components/Purchased/purchased";
-import Home from "./components/Home/home";
-import Wishlist from "./components/Wishlist/wishlist";
-import LaunchPage from "./components/LaunchPage/Launchpage";
-import { SliderData } from "./components/LaunchPage/SliderData";
-import purchased from "./components/LaunchPage/icons/purchased.png";
-import wishlistedIcon from "./components/LaunchPage/icons/wishlistedIcon.jpeg";
-import userIcon from "./components/LaunchPage/icons/user-icon.webp";
 import LoginPage from "./pages/loginPage";
 import EventsPage from "./pages/eventsPage";
+import PurchasePage from "./pages/purchasePage";
+import WhishlistPage from "./pages/whishlistPage";
 import NavBar from "./components/navBar";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Link,
-  Navigate,
-  Outlet,
-  useNavigate,
-} from "react-router-dom";
+import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
+import LaunchPage from "./components/LaunchPage/Launchpage";
+import { SliderData } from "./components/LaunchPage/SliderData";
 
 const ProtectedRoute = ({ redirectUri, children }) => {
   let isAuthenticated = JSON.parse(localStorage.getItem("isAuthenticated"));
@@ -29,29 +17,56 @@ const ProtectedRoute = ({ redirectUri, children }) => {
 
   return children;
 };
+
 function App() {
   const router = useNavigate();
   //   let isAuthenticated = JSON.parse(localStorage.getItem("isAuthenticated"));
   //   if (!isAuthenticated) {
   //     return null;
   //   }
+  const [searchTerm, setSearchTerm] = useState();
 
   const handleLogout = () => {
     localStorage.clear();
     router("/", { replace: true });
   };
+  const handleRouteChange = (route) => {
+    router(route, { replace: true });
+  };
+  const handleSearch = (searchText) => {
+    setSearchTerm(searchText);
+  };
   return (
     <div className="App">
-      <NavBar handleLogout={() => handleLogout()} />
+      <NavBar
+        handleLogout={() => handleLogout()}
+        handleRouteChange={(route) => handleRouteChange(route)}
+        handleSearch={(searchText) => handleSearch(searchText)}
+      />
       <LaunchPage slides={SliderData} />
       <Routes>
         <Route path="/" element={<LoginPage />} />
-
         <Route
           path="/events"
           element={
             <ProtectedRoute redirectUri={"/"}>
-              <EventsPage />
+              <EventsPage searchTerm={searchTerm} />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/purchase"
+          element={
+            <ProtectedRoute redirectUri={"/"}>
+              <PurchasePage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/whishlist"
+          element={
+            <ProtectedRoute redirectUri={"/"}>
+              <WhishlistPage />
             </ProtectedRoute>
           }
         />

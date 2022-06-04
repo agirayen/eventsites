@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Form, Button, Container, Row, Col } from "react-bootstrap";
+import React, { useState } from "react";
+import { Button, Container, Row, Col } from "react-bootstrap";
 
 const Login = ({ handleLogin, handleSignUp }) => {
   const [username, setUsername] = useState();
