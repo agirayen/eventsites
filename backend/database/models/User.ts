@@ -1,6 +1,6 @@
 import {DataTypes, Model} from "sequelize";
 //import bcrypt from "bcrypt";
-import {db} from "../DBService";
+import {db} from "../DBServices";
 
 interface User extends Model {
     email: string,
@@ -31,7 +31,7 @@ interface User extends Model {
       allowNull: false,
     },
     created_on: {
-        type: DataTypes.date,
+        type: DataTypes.DATE,
         allowNull: true,
       },
     last_login: {

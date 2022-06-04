@@ -1,4 +1,4 @@
-import {db} from "../DBService";
+import {db} from "../DBServices";
 import {DataTypes, Model} from "sequelize";
 
 interface Venue extends Model {
@@ -31,7 +31,7 @@ interface Venue extends Model {
         allowNull: false,
       },
       postal_code: {
-        type: DataTypes.string,
+        type: DataTypes.STRING,
         allowNull: false,
       },
       address: {

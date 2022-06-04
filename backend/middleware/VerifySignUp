@@ -1,5 +1,5 @@
 import {  User } from "../database/models/User";
-import {db} from "../database/DBService";
+import {db} from "../database/DBServices";
 
 export const duplicateEmails = (req, res, next) => {
   console.log("Lets checks for duplicate email");

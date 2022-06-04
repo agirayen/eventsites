@@ -1,4 +1,4 @@
-import {db} from "../DBService";
+import {db} from "../DBServices";
 import {DataTypes, Model} from "sequelize";
 
 interface Events extends Model {
@@ -30,7 +30,7 @@ interface Events extends Model {
         allowNull: false,
       },
       event_type: {
-        type: DataTypes.date,
+        type: DataTypes.DATE,
         allowNull: true,
       },
       url: {
