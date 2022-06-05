@@ -35,5 +35,8 @@
     "ts-jest": "^27.1.3",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "sequelize-auto": "^0.8.8"
   }
 }
