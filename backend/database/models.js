@@ -41,6 +41,7 @@ const User = db.define('users', {
   },
 }, {
   tableName: "users",
+  timestamps: false,
   indexes: [
     {
       name: "users_pkey",
@@ -84,6 +85,7 @@ const venueAddress = db.define('venue_address', {
   },
 }, {
   tableName: "venue_address",
+  timestamps: false,
   indexes: [
     {
       name: "venue_address_pkey",
@@ -128,6 +130,7 @@ const venue = db.define('venue', {
   },
 }, {
   tableName: "venue",
+  timestamps: false,
   indexes: [
     {
       name: "venue_pkey",
@@ -173,6 +176,7 @@ const events = db.define('events', {
   },
 }, {
   tableName: "events",
+  timestamps: false,
   indexes: [
     {
       name: "events_event_name_key",
@@ -208,6 +212,7 @@ const whishlist = db.define('whishlist', {
   },
 }, {
   tableName: "whishlist",
+  timestamps: false,
   indexes: [
     {
       name: "whishlist_pkey",
@@ -236,6 +241,7 @@ const purchased = db.define('purchased', {
   },
 }, {
   tableName: "purchased",
+  timestamps: false,
   indexes: [
     {
       name: "purchased_pkey",
