@@ -12,27 +12,25 @@
 4. Add .dockerignore file 
 
 # Creating backend react app 
-1. Ensure you are under `eventsites` directory
+1. Ensure you are under `eventsites\backend` directory
 2. Run npm init
 3. Run npm install --save-dev nodemon
 4. Run npm install express
-5. Run npm install --save-dev @types/node
-6. create file 'server'
-7. create public directory
-  - create index.html 
-8. create file tsconfig.json - to keep the file after compile 
-9. Create Dockerfile
-10. Add .dockerignore file 
-
-# Creating Database layer
-1. Install necessary dependencies for eg. `npm install cors`
-2. Add query service support using pg(postgres) pool
-3. Modify docker-compose.yml with the right postgres port and db
-4. Update server.js routes to invoke queryservice 
-
-# TBD
-1. Creating the tables (Need database schema and seed ???) 
-2. Update the queryservice as per requirement 
+5. create file 'server'
+6. create public directory
+    -create index.html 
+7. create file tsconfig.json - to keep the file after compile 
+8. Create Dockerfile
+9. Add .dockerignore file 
+## Creating Database layer
+  1. Install necessary dependencies for eg. `npm install cors`
+  2. Add query service support using pg(postgres) pool
+  3. Modify docker-compose.yml with the right postgres port and db
+  4. Create models.js to create database schema for tables, keys and indexes  using Sequelize library 
+  5. Add `timestamp:false` in all database models not to create CreatedAt and UpdatedAt columns by Sequelize library
+  6. Add `seed.js` to invoke each model using `<Model>.sync({ force: true });` to drop the tables and data and recreate the tables on every restart of server.
+  7. Add command script in `package.json` to invoke seed
+10. Update server.js routes to invoke queryservice 
 
 
 
