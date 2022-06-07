@@ -1,13 +1,13 @@
 # eventsites
-Event sites is an web application which helps consumer to schedule and search events
+Event sites is an web application which helps consumer to search events and purchase and add into wishlist
 ## Front End
 TBD
 ## Back End
 1. Ensure you are under `eventsites\backend` directory
 2. Run npm init
 3. Run npm install --save-dev nodemon
-4. Run npm install express
-5. create file 'server'
+4. Run npm install express which help to starting pu and listening defined port
+5. create file 'server' which is the entry point to our backend application
 6. create public directory
     -create index.html 
 7. Create Dockerfile
@@ -16,7 +16,7 @@ TBD
   1. Install necessary dependencies for eg. `npm install cors`
   2. Add query service support using pg(postgres) pool
   3. Modify docker-compose.yml with the right postgres port and db
-  4. Create models.js to create database schema for tables, keys and indexes  using Sequelize library . For eg. Create user model with
+  4. Create models.js to create database schema for tables, keys and indexes using Sequelize library. which helps to import datatype option to support creation of database schema For eg. Create user model with
   ```
   const User = db.define('users', {
   user_id: {
@@ -77,7 +77,7 @@ For eg. To register a route for createUser
   createUser(req, res);
 });
 ```
-10. Server runs by default with port number 3000.
+10. Server runs by default with port number 3000 because we have initialized it seperately in the server file.
 
 
 
