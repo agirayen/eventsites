@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Row, Col, Container } from "react-bootstrap";
 
 const NavBar = ({ handleLogout, handleRouteChange, handleSearch }) => {
   const [search, setSearch] = useState();
@@ -12,7 +11,7 @@ const NavBar = ({ handleLogout, handleRouteChange, handleSearch }) => {
     setSearch(value);
     handleSearch(value);
   };
-
+  /*
   return (
     <Container>
       <Row>
@@ -34,5 +33,26 @@ const NavBar = ({ handleLogout, handleRouteChange, handleSearch }) => {
     </Container>
   );
 };
-
+*/
+  return (
+    <>
+      <div class="navbarItems">
+        <div class="navbareach">
+          <span onClick={() => handleRouteChange("purchase")}>Purchased</span>
+        </div>
+        <div class="navbareach">
+          <span onClick={() => handleRouteChange("whishlist")}>Whislist</span>
+        </div>
+        <div class="navbareach">
+          <span onClick={() => handleLogout()}>Logout</span>
+        </div>
+      </div>
+      <input
+        value={search}
+        onChange={(e) => handleTextChange(e)}
+        placeholder="Enter zipcode here"
+      />
+    </>
+  );
+};
 export default NavBar;
