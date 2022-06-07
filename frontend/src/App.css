@@ -4,23 +4,12 @@ input {
   margin: 8px 0;
   box-sizing: border-box;
 }
-/* This is search field css and html should be 
-/*<input type="text" name="search" placeholder="Search.."> */
-#search {
-  background-color: white;
-  background-image: url("./components/LaunchPage/icons/searchIcon.png");
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  padding-left: 40px;
-}
-/*intended for login and signup options.*/
-.button {
+
+button {
   border: none;
-  color: white;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 16px;
 }
 .navbarItems {
@@ -40,4 +29,38 @@ input {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+}
+table {
+  font-size: 16px;
+  font-family: sans-serif;
+  border-collapse: collapse;
+  border: 1px solid rgba(15, 14, 14, 0.867);
+  overflow-x: auto;
+}
+
+thead tr {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+thead th {
+  padding: 12px 15px;
+}
+tr,
+td {
+  padding: 12px 15px;
+  border-bottom: 1px solid rgba(185, 179, 179, 0.867);
+}
+tbody tr:hover {
+  background-color: rgba(161, 168, 168, 0.1);
+}
+.EventsTable {
+  margin-top: 2em;
+  border-radius: 1em;
+  border: groove;
+  border-color: black;
+  padding: 1em;
+  margin-right: 5%;
+  margin-left: 5%;
+  box-shadow: 1px 2px 20px 7px #888;
 }
