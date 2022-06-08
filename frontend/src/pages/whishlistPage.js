@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { baseUrl } from "../config";
-import { getData } from "../services/httpService";
+import { getData, deleteData } from "../services/httpService";
 import EventsTable from "../components/eventsTable";
 
 const PurchasePage = () => {
@@ -13,6 +13,17 @@ const PurchasePage = () => {
       setEventsData(events.data.data);
     });
   }, []);
+
+  const handleRemove = (data) => {
+    console.log("whishlist", data);
+    let url = `${baseUrl}/removeWhishlist`;
+    let deleteInputParams = {
+      data: { id: data.whishlist_id },
+    };
+    deleteData(url, deleteInputParams).then((success) => {
+      console.log("successfuly delete item", success);
+    });
+  };
 
   const handlePurchase = (eventData) => {
     // let url = `${baseUrl}/savePurchase`;
@@ -41,13 +52,16 @@ const PurchasePage = () => {
 
   return (
     <div>
-      {eventsData && (
+      {eventsData && eventsData.length > 0 && (
         <EventsTable
           data={eventsData}
           handlePurchase={(data) => handlePurchase(data)}
           handleWhishlist={(data) => handleWhishlist(data)}
+          handleRemove={(data) => handleRemove(data)}
+          showRemove={true}
         />
       )}
+      {eventsData && eventsData.length === 0 && <div>No Data</div>}
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { baseUrl } from "../config";
-import { getData } from "../services/httpService";
+import { getData, postData } from "../services/httpService";
 import EventsTable from "../components/eventsTable";
 
 const PurchasePage = () => {
@@ -41,7 +41,7 @@ const PurchasePage = () => {
 
   return (
     <div>
-      {eventsData && (
+      {eventsData && eventsData.length && (
         <EventsTable
           data={eventsData}
           handlePurchase={(data) => handlePurchase(data)}

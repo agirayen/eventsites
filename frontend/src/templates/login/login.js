@@ -30,6 +30,7 @@ const Login = ({ handleLogin, handleSignUp }) => {
         <Col>Password :</Col>
         <Col>
           <input
+            type="password"
             value={password}
             onChange={(e) => handleInputChange(e, "pass")}
           />

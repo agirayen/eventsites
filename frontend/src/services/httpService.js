@@ -9,3 +9,7 @@ export const getData = (url, data) => {
     params: data,
   });
 };
+
+export const deleteData = (url, data) => {
+  return axios.delete(url, data);
+};

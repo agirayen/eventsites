@@ -54,11 +54,12 @@ const EventsPage = ({ searchTerm }) => {
 
   return (
     <div>
-      {eventsData && (
+      {eventsData && eventsData.length && (
         <EventsTable
           data={eventsData}
           handlePurchase={(data) => handlePurchase(data)}
           handleWhishlist={(data) => handleWhishlist(data)}
+          showPurchaseRemove={true}
         />
       )}
     </div>
