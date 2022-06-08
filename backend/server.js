@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 var cors = require("cors");
 const queryService = require("./pool");
 const app = express();
-const port = 3000;
+const port = 3002;
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -21,6 +21,7 @@ const {
   savePurchase,
   getPurchase,
   getWhishlist,
+  removeWhishlist,
 } = queryService;
 
 app.get("/", (req, res) => {
@@ -54,6 +55,10 @@ app.get("/getWhishlist", (req, res) => {
   getWhishlist(req, res);
 });
 
+app.delete("/removeWhishlist", (req, res) => {
+  removeWhishlist(req, res);
+});
+
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`Example app listening on current port ${port}`);
 });
