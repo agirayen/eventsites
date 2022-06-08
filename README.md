@@ -1,7 +1,14 @@
 # eventsites
 Event sites is an web application which helps consumer to search events and purchase and add into wishlist
 ## Front End
-TBD
+Some node modules to be installed are- 
+npm install bootstrap
+npm install bootstrap-icons
+
+cd frontend 
+npm start or docker-compose up 
+This usually runs on the 3000.
+
 ## Back End
 1. Ensure you are under `eventsites\backend` directory
 2. Run npm init
