@@ -54,6 +54,8 @@ For eg. To register a route for createUser
 `cd eventsites/backend` 
  Run `docker-compose up` which will run the database in port 5432 and run the service in docker port 3001 and host port 3000 
 
+ Call the backend `http://localhost:3000/`
+
 3. To start front end
 `cd frontend` 
 
