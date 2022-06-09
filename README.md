@@ -2,11 +2,11 @@
 Event sites is an web application which helps consumer to search events and purchase and add into wishlist
 ## Front End
 Some node modules to be installed are- 
-1. npm install bootstrap
-2. npm install bootstrap-icons
-3. cd frontend 
-4. npm start or docker-compose up 
-This usually runs on the 3000.
+1. cd frontend  
+2. npm install 
+2. npm install bootstrap-icons and npm install bootstrap (just in case if bootsrao-fa kind of error is seen) 
+3. npm start or docker-compose up 
+This usually runs on the 3000 port.
 
 ## Back End
 1. Ensure you are under `eventsites\backend` directory
