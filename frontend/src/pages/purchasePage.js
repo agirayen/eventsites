@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { baseUrl } from "../config";
-import { getData, postData } from "../services/httpService";
+import { getData } from "../services/httpService";
 import EventsTable from "../components/eventsTable";
 
 const PurchasePage = () => {
@@ -41,13 +41,14 @@ const PurchasePage = () => {
 
   return (
     <div>
-      {eventsData && eventsData.length && (
+      {eventsData && eventsData.length > 0 && (
         <EventsTable
           data={eventsData}
           handlePurchase={(data) => handlePurchase(data)}
           handleWhishlist={(data) => handleWhishlist(data)}
         />
       )}
+      {eventsData && eventsData.length === 0 && <div>No Data</div>}
     </div>
   );
 };
