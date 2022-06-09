@@ -1,15 +1,16 @@
 const Pool = require("pg").Pool;
 const moment = require("moment");
-const connectionString = "postgres://postgres:postgrespw@localhost:55000";
+const connectionString =
+  "postgresql://postgres:postgrespw@host.docker.internal:5433/events";
 // const connectionString = "postgres://postgres/postgres";
 const pool = new Pool({ connectionString });
 
 // const pool = new Pool({
 //   user: "postgres",
-//   host: "127.0.0.1",
-//   database: "Events",
-//   password: " ",
-//   port: 5432,
+//   host: "localhost",
+//   database: "public",
+//   password: "postgrespw",
+//   port: 5433,
 // });
 
 const getUsers = (request, response) => {
