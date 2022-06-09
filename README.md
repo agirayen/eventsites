@@ -56,8 +56,15 @@ For eg. To register a route for createUser
 
  Call the backend `http://localhost:3000/`
 
+2. To create database schema 
+  GoTo `cd eventsites/backend/` 
+  RUN `npm run seed`
+
 3. To start front end
-`cd frontend` 
+GoTo `cd eventsites/frontend`
+Run `docker-compose up`
+Call the frontend `http://localhost:3001/`
+
 
 
 
