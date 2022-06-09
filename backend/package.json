@@ -4,11 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "build": "npx tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node server.js",
-    "migrate": "npx sequelize db:migrate:undo:all && npx sequelize db:migrate",
-    "dev": "nodemon server.js",
+    "start": "node server.js",
     "seed": "node database/seed.js"
   },
   "author": "",
