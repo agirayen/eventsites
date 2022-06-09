@@ -46,7 +46,7 @@ For eg. To register a route for createUser
   createUser(req, res);
 });
 ```
-7. Server runs by default with port number 3002 because we have initialized it seperately in the server file.
+7. Server runs by default with port number 3000 because we have initialized it seperately in the server file.
 
 ## Running the service 
 1. To start the database  
@@ -55,7 +55,7 @@ For eg. To register a route for createUser
 
 2. To start back end 
 `cd backend`
-Run `npm run dev`  which will run on port 3002 
+Run `npm run dev`  which will run on port 3000 
 
 3. To start front end
 `cd frontend` 
