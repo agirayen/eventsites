@@ -18,6 +18,7 @@ This usually runs on the 3000 port.
     -create index.html 
 7. Create Dockerfile
 8. Add .dockerignore file 
+9. Create `docker-compose.yml` file and combine both backend and postgres
 ## Creating Database layer
   1. Install necessary dependencies for eg. `npm install cors`
   2. Add query service support using pg(postgres) pool
@@ -49,13 +50,9 @@ For eg. To register a route for createUser
 7. Server runs by default with port number 3000 because we have initialized it seperately in the server file.
 
 ## Running the service 
-1. To start the database  
-`cd eventsites` 
- Run `docker-compose up` which will run the database in port 55000
-
-2. To start back end 
-`cd backend`
-Run `npm run dev`  which will run on port 3000 
+1. To start the backend and database  
+`cd eventsites/backend` 
+ Run `docker-compose up` which will run the database in port 5432 and run the service in docker port 3001 and host port 3000 
 
 3. To start front end
 `cd frontend` 

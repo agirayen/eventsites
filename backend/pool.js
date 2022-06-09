@@ -1,7 +1,6 @@
 const Pool = require("pg").Pool;
 const moment = require("moment");
-const connectionString =
-  "postgresql://postgres:postgrespw@host.docker.internal:5433/events";
+const connectionString = "postgres://postgres:postgrespw@dbservice:5432/Events";
 // const connectionString = "postgres://postgres/postgres";
 const pool = new Pool({ connectionString });
 

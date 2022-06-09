@@ -1,0 +1,26 @@
+version: "3.7"
+services:
+  dbservice:
+    image: postgres:latest
+    environment:
+      - POSTGRES_DB=Events
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgrespw
+    ports:
+      - 5432:5432
+    volumes:
+      - "data:/var/lib/postgresql"
+  backend:
+    container_name: eventmanager
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ".:/app"
+      - "/app/node_modules"
+    depends_on:
+      - dbservice
+    ports:
+      - 3000:3001
+volumes:
+  data:
