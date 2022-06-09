@@ -60,7 +60,11 @@ For eg. To register a route for createUser
   GoTo `cd eventsites/backend/` 
   RUN `npm run seed`
 
-3. To start front end
+3. Run the  `eventsites/backend/database/seed-data.sql` file in the database for populating `venue` and `events` 
+
+Open the database using postgres client for eg. PgAdmin
+
+4. To start front end
 GoTo `cd eventsites/frontend`
 Run `docker-compose up`
 Call the frontend `http://localhost:3001/`
