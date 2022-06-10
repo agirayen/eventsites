@@ -15,3 +15,12 @@ VALUES ('Holi show',2, 'https://www.ticketmaster.com/event/Z7r9jZ1AdC9f8','event
 
 INSERT INTO events(event_name,venue_id,url, event_type , startDate) 
 VALUES ('Rain dance',2, 'https://www.ticketmaster.com/event/Z7r9jZ1AdC9f8','event','2022-06-07T22:30:00Z');
+
+INSERT INTO public.purchased(user_id, event_id) VALUES ( 1, 1);
+INSERT INTO public.purchased(user_id, event_id) VALUES ( 1, 2);
+INSERT INTO public.purchased(user_id, event_id) VALUES ( 2, 2);
+INSERT INTO public.purchased(user_id, event_id) VALUES ( 3, 1);
+
+INSERT INTO public.whishlist(user_id, event_id) VALUES ( 1, 1);
+INSERT INTO public.whishlist(user_id, event_id) VALUES ( 2, 2);
+INSERT INTO public.whishlist(user_id, event_id) VALUES ( 3, 1);
